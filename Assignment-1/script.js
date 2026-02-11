@@ -51,3 +51,7 @@ form.addEventListener("submit", (e) => {
     form.reset();
 });
 
+sampleBtn.addEventListener("click", () => {
+    list.innerHTML = "";
+    sampleEvents.forEach(addEvent);
+});
