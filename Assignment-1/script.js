@@ -13,7 +13,7 @@ const sampleEvents = [
         title: "Web Development",
         date: "2026-02-10",
         category: "Front-end-development",
-        description: "Make Websites.",
+        description: "Making Websites by Piyush Jain.",
     },
     {
         title: "Web Dev Meetup",
