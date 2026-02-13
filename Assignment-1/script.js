@@ -76,4 +76,32 @@ window.addEventListener("keydown", (e) => {
     }
 });
 
+function addEvent(eventData) {
+    const card = document.createElement("div");
+    card.className = "box";
+
+    const closeBtn = document.createElement("button");
+    closeBtn.className = "close-btn";
+    closeBtn.innerHTML = "x";
+
+    closeBtn.addEventListener("click", () => {
+        card.remove();
+    });
+
+    card.innerHTML = `
+        <h3>${eventData.title}</h3>
+        <p><strong>Date:</strong> ${eventData.date}</p>
+        <p><strong>Category:</strong> ${eventData.category}</p>
+        <p>${eventData.description || "No description"}</p>
+    `;
+
+    card.appendChild(closeBtn);
+
+    if (list.querySelector(".msg")) {
+        list.innerHTML = "";
+    }
+
+    list.appendChild(card);
+}
+
 renderEmpty();
