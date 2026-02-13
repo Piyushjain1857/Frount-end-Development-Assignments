@@ -64,6 +64,10 @@ clearBtn.addEventListener("click", () => {
     clearForm();
 });
 
+function renderEmpty() {
+    list.innerHTML = '<div class="msg">No events yet. Add your first event!</div>';
+}
+
 window.addEventListener("keydown", (e) => {
     if (e.key === " ") {
         keyOutput.textContent = "Space";
