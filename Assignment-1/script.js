@@ -55,3 +55,21 @@ sampleBtn.addEventListener("click", () => {
     list.innerHTML = "";
     sampleEvents.forEach(addEvent);
 });
+
+function clearForm() {
+    list.innerHTML = '<div class="msg">No events yet. Add your first event!</div>';
+}
+
+clearBtn.addEventListener("click", () => {
+    clearForm();
+});
+
+window.addEventListener("keydown", (e) => {
+    if (e.key === " ") {
+        keyOutput.textContent = "Space";
+    } else {
+        keyOutput.textContent = e.key;
+    }
+});
+
+renderEmpty();
